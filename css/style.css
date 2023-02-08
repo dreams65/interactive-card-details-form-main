@@ -1,0 +1,338 @@
+@import url('./../vendor/reset.css');
+@import url('./../vendor/fonts/fonts.css');
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap'); */
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grayish: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --hover-btn : hsl(278, 68%, 27%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+input {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+label {
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.label:first-child {
+    margin-top: 0px;
+}
+
+.attribution {
+    margin-top: 40px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.card-info {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+.card-info__background {
+    width: 400px;
+    background-image: url('./../images/bg-main-desktop.png');
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: var(--white);
+}
+
+.front-cc {
+    background-image: url('./../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 20%;
+    left: 47%;
+    padding: 15px;
+    height: 180px;
+    width: 354px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.front-cc__logo {
+    max-width: 60px;
+}
+
+.front-cc__number {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.front-cc__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.front-cc__info_name {
+    text-transform: uppercase;
+}
+
+.back-cc {
+    background-image: url('./../images/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 23%;
+    left: 60%;
+    padding: 15px;
+    width: 354px;
+    height: 180px;
+}
+
+.back-cc__cvc {
+    position: relative;
+    top: 44%;
+    left: 80%;
+}
+
+.card-info__body {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardholder__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+}
+
+.cardholder__exp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardholder__name,
+.cardholder__card-number,
+.cardholder__card-exp,
+.cardholder__card-exp_mouth,
+.cardholder__card-exp_year,
+.cardholder__card-cvc {
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border-color: var(--light-grayish);
+    border-style: solid;
+}
+
+.cardholder__name:focus,
+.cardholder__card-number:focus,
+.cardholder__card-exp:focus,
+.cardholder__card-exp_mouth:focus,
+.cardholder__card-exp_year:focus,
+.cardholder__card-cvc:focus {
+    border-color: var(--dark-grayish-violet);
+}
+
+.cardholder__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cardholder__card-exp_mouth,
+.cardholder__card-exp_year {
+    width: 40px;
+}
+
+.cardholder__card-cvc {
+    width: 150px;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardholder__submit-btn {
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border-radius: 15px;
+    border-style: none;
+    padding: 15px 20px;
+    margin-top: 20px;
+    transition: .3s;
+}
+
+.cardholder__submit-btn:hover {
+    background-color: var(--hover-btn);
+    transition: .3s;
+}
+
+.validate {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
+
+.invalid {
+    border-color: red;
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border-style: solid;
+}
+
+.valid {
+    border-color : green;
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border-style: solid;
+}
+
+.complete {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.complete__title {
+   font-family: 'Space Grotesk', sans-serif;
+   text-transform: uppercase;
+   font-size: 32px;
+   color: var(--very-dark-violet);
+   margin-top: 30px;
+}
+
+.complete__text {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--dark-grayish-violet);
+    margin-top: 30px;
+}
+
+.complete__btn {
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border-radius: 15px;
+    border-style: none;
+    padding: 15px 20px;
+    margin-top: 50px;
+    width: 100%;
+    transition: .3s;
+}
+
+.complete__btn:hover {
+    background-color: var(--hover-btn);
+    transition: .3s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 960px) {
+    .card-info {
+        flex-direction: column;
+    }
+    .card-info__background {
+        width: 100%;
+        height: 250px;
+        background-image: url('./../images/bg-main-mobile.png');
+    }
+
+    .card-info__body {
+        width: unset;
+        padding: 0 15px;
+    }
+    
+    .cardholder__form {
+        margin-top: 40px;
+    }
+
+    .front-cc {
+        position: relative;
+        z-index: 10;
+        top: 55%;
+        max-height: 120px;
+        height: 100%;
+        width: 240px;
+        left: 45%;
+        transform: translate(-50%);
+    }
+
+    .front-cc__number {
+        font-size: 18px;
+    }
+
+    .front-cc__info_name,
+    .front-cc__info_exp-date,
+    .mounth,
+    .year  {
+        font-size: 16px;
+    }
+
+    .back-cc {
+        max-height: 120px;
+        height: 100%;
+        width: 240px;
+        position: relative;
+        z-index: 5;
+        top: -110px;
+        left: 54%;
+        transform: translate(-50%);
+    }
+
+    .back-cc__cvc {
+        width: min-content;
+        top: 42%;
+        font-size: 16px;
+    }
+
+    .cardholder__name, 
+    .cardholder__card-number, 
+    .cardholder__card-exp, 
+    .cardholder__card-exp_mouth, 
+    .cardholder__card-exp_year, 
+    .cardholder__card-cvc {
+        padding: 10px 10px;
+        border-radius: 15px;
+    }
+
+    .cardholder__card-cvc {
+        width: 60px;
+    }
+
+    .complete {
+        margin-top: 65px;
+    }      
+}
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+    .front-cc {
+        left: 18%;
+    }
+
+    .back-cc {
+        left: 18%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .front-cc {
+       left: 25%;
+    }
+
+    .back-cc {
+        left: 35%;
+    }
+}
